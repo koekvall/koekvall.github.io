@@ -7,9 +7,9 @@
 		</head>
 		<body>
 			<nav>
-	    		!<ul>
-	        	!	<li><a href="/">Home</a></li>
-	    		!</ul>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+	    		</ul>
 			</nav>
 			<div class="container">
 			
