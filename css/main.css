@@ -24,7 +24,6 @@ footer {
     color:#ffcc33;
     border-top: 1px solid #d5d5d5;
     font-size: 1em;
-    height:75%;
 }
 
 footer a{
@@ -39,4 +38,9 @@ nav ul li, footer ul li {
 
 a{
     color:gray;
+}
+
+.img-profile {
+    border-radius: 15%;
+    width: 150px;
 }
