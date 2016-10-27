@@ -41,5 +41,19 @@ a{
 
 .img-profile {
     border-radius: 15%;
-    width: 150px;
+    height: 150px;
+}
+
+.about{
+    margin-left: 30px;
+    margin-top: -20px;
+    flex:1;
+}
+
+main{
+    clear:both;
+}
+
+.parent{
+    display: flex;
 }
