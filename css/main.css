@@ -1,6 +1,8 @@
 body{
     font-family:sans-serif;
+    margin: 3%;
 }
+
 header{
     background: #7a0019;
     color:#ffcc33;
@@ -11,32 +13,11 @@ h1 {
     text-align: center;
     font-size: 150%;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0.6% 0px 0.6% 0px;
 }
 
-
-p, ul, ol {
-    font-size: 1.2em;
-    line-height: 1.1em;
-}
-footer {
-    border-radius: 15px;
-    background: #7a0019;
-    color:#ffcc33;
-    font-size: 1em;
-}
-
-footer a{
-    color:white;
-}
-
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-    list-style: none;
-}
-
-a{
-    color:gray;
+.flex-parent{
+    display: flex;
 }
 
 .img-profile {
@@ -50,10 +31,31 @@ a{
     flex:1;
 }
 
+a{
+    color:gray;
+}
+
 main{
     clear:both;
 }
 
-.parent{
-    display: flex;
+p, ul, ol {
+    font-size: 1.2em;
+    line-height: 1.1em;
+}
+
+footer {
+    border-radius: 15px;
+    background: #7a0019;
+    color:#ffcc33;
+}
+
+footer a{
+    color:white;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+    list-style: none;
 }
