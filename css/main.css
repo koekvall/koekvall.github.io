@@ -20,12 +20,12 @@ h1 {
     display: flex;
 }
 
-.img-profile {
+#img-profile {
     border-radius: 15%;
     height: 150px;
 }
 
-.about{
+#about{
     margin-left: 30px;
     margin-top: -20px;
     flex:1;
