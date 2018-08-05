@@ -1,5 +1,5 @@
 body{
-    font-family: 'Arvo', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 3%;
 }
 
@@ -12,7 +12,7 @@ header{
 h1 {
     text-align: center;
     font-size: 150%;
-    font-family: 'Arvo', 'Helvetica', 'Arial', 'Sans-Serif';
+    font-family: 'Lato', 'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0.6% 0px 0.6% 0px;
 }
 
