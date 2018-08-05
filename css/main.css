@@ -6,7 +6,7 @@ body{
 header{
     background: #3ba1e5;
     color:#ffcc33;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 }
 
 #img-profile {
-    border-radius: 15%;
+    border-radius: 5%;
     height: 150px;
 }
 
@@ -45,7 +45,7 @@ p, ul, ol {
 }
 
 footer {
-    border-radius: 15px;
+    border-radius: 5px;
     background: #3ba1e5;
     color:#ffcc33;
 }
