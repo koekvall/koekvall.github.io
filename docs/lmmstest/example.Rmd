@@ -142,14 +142,13 @@ lmmstest::score_test(y = ex_data$y,
 
 # Comparison to common test statistics
 
-The following figure shows quantile-quantile plots for the modified score,
-likelihood ratio, and Wald test statistics in a simulation. The theoretical
-quantiles are from a chi-square distribution with 3 degrees of freedom. Data
-were generated according to the model from the previous section assuming the
-null hypothesis $(\sigma, \lambda_1, \lambda_2) = (1, 0, 0)$ (first plot), $(1,
-0.01, 0.01)$ (second figure), or  $(1, 1, 1)$ (third plot). Circles correspond to
-the proposed procedure, triangles to the likelihood ratio test, and plus signs
-to the Wald test.
+The following figure shows quantile-quantile plots for the modified score
+(circles), likelihood ratio (triangles), and Wald (plus sign) test statistics
+from a simulation. The theoretical quantiles are from a chi-square distribution
+with 3 degrees of freedom. Data were generated according to the model from the
+previous section assuming the null hypothesis $(\sigma, \lambda_1, \lambda_2) =
+(1, 0, 0)$ (first plot), $(1, 0.01, 0.01)$ (second plot), or  $(1, 1, 1)$ (third
+plot).
 
 ```{r, echo = F, fig.align='center', fig.width = 10, fig.height = 5}
 sim_data <- readRDS("sims.Rds")
@@ -196,9 +195,20 @@ points(x = qchisq(pp, df = 3),
 abline(a = 0, b = 1, col = "red")
 ```
 
-When no scale parameter is zero, classical theory says all three test
-statistics are asymptotically chi-square distributed with 3 degrees of
-freedom. The third plot indicates this approximation is good when
-scale parameters are substantially different from zero. The second plot
-shows the asymptotic distribution is a good approximation for the proposed
-procedure but not for the other two when scale parameters are near zero.
+When no scale parameter is zero, classical theory says all three test statistics
+are asymptotically chi-square distributed with 3 degrees of freedom. The third
+plot indicates this asymptotic distribution is a good approximation when scale
+parameters are substantially different from zero.
+
+The second plot shows the asymptotic distribution is a good approximation for
+the proposed procedure but not for the other two when scale parameters are near
+zero.
+
+When some scale parameters are zero, the asymptotic distributions of the
+likelihood ratio and Wald test statistics are no longer chi-square
+distributions, and accordingly the first plot shows poor agreement between the
+quantiles. By contrast, the modified score test has an asymptotic chi-square
+distribution also in this setting, and the first plot shows the asymptotic
+distribution provides a good approximation.
+
+
