@@ -28,9 +28,9 @@ multivariate normal with mean zero and covariance matrix $\sigma^2 I_n$,
 independent of $U$. Assume further that the elements of $U$ are independent and
 that, for every $j \in \{1, \dots, q\}$, there is a $k \in \{1, \dots, d\}$ such
 that $\mathrm{var}(U_j) = \lambda_k^2$. That is, the elements of $\lambda =
-[\lambda_1, \dots, \lambda_d]^T \in [0, \infty)^d$ are the standard deviations of the random
-effects. Several random effects can have the same variance, in which case $d <
-q$.
+[\lambda_1, \dots, \lambda_d]^T \in [0, \infty)^d$ are the standard deviations
+of the random effects. Several random effects can have the same variance, in
+which case $d < q$.
 
 # Background
 
@@ -59,7 +59,7 @@ This model can be written in stacked form by letting $Y = [Y_{1, 1}, \dots,
 Y_{N, N_T}]^T$ and defining $X$ and $Z$ accordingly. In particular, $Z \in
 \mathbb{R}^{n \times 2N}$ with $n = NN_T$. The random effect $U_{1, i}$ is a
 random intercept shared by all observations from the same unit and $U_{2, i}$ is
-a random slope, different for each unit. In stacked notation,
+a random slope, also shared by observations from unit. In stacked notation,
 \[
   U = \begin{bmatrix} U_{1, 1} \\ U_{1, 2} \\ \vdots \\ U_{2, N}\end{bmatrix}
   \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1, \lambda_2) \otimes
