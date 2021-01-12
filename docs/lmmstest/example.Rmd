@@ -63,9 +63,10 @@ are, respectively, a random intercept and a random slope, shared by observations
 from the same unit. In stacked notation,
 \[
   U = \begin{bmatrix} U_{1, 1} \\ U_{1, 2} \\ \vdots \\ U_{2, N}\end{bmatrix}
-  \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1, \lambda_2) \otimes
-  I_N\right).
+  \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1^2, \lambda_2^2) \otimes
+  I_N\right),
 \]
+where $\otimes$ is the Kronecker product.
 
 Consider testing the null hypothesis $(\sigma, \lambda_1, \lambda_2) = (1, 0.5,
 0)$. When $\lambda_2 = 0$, the Fisher information is singular and common test

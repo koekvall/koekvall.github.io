@@ -400,9 +400,9 @@ library(lmmstest)</code></pre>
   Y_{i, t} = \beta_1 + \beta_2 X_{i, t} + U_{1, i} + U_{2, i} X_{i, t} + E_{i, t}.
 \]</span> This model can be written in stacked form by letting <span class="math inline">\(Y = [Y_{1, 1}, \dots, Y_{N, N_T}]^T\)</span> and defining <span class="math inline">\(X\)</span>, <span class="math inline">\(Z\)</span>, <span class="math inline">\(U\)</span>, and <span class="math inline">\(E\)</span> accordingly. In particular, <span class="math inline">\(Z \in \mathbb{R}^{n \times 2N}\)</span> with <span class="math inline">\(n = NN_T\)</span>. The random effects <span class="math inline">\(U_{1, i} \sim \mathcal{N}(0, \lambda_1)\)</span> and <span class="math inline">\(U_{2, i} \sim \mathcal{N}(0, \lambda_2)\)</span> are, respectively, a random intercept and a random slope, shared by observations from the same unit. In stacked notation, <span class="math display">\[
   U = \begin{bmatrix} U_{1, 1} \\ U_{1, 2} \\ \vdots \\ U_{2, N}\end{bmatrix}
-  \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1, \lambda_2) \otimes
-  I_N\right).
-\]</span></p>
+  \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1^2, \lambda_2^2) \otimes
+  I_N\right),
+\]</span> where <span class="math inline">\(\otimes\)</span> is the Kronecker product.</p>
 <p>Consider testing the null hypothesis <span class="math inline">\((\sigma, \lambda_1, \lambda_2) = (1, 0.5, 0)\)</span>. When <span class="math inline">\(\lambda_2 = 0\)</span>, the Fisher information is singular and common test statistics are unreliable. The following code generates one realization from the model with true parameters consistent with the null hypothesis and tests the null hypothesis using the proposed procedure. The predictors are drawn independently from a uniform distribution on <span class="math inline">\([-1, 2]\)</span>.</p>
 <pre class="r"><code># For replicability
 set.seed(2)
