@@ -135,7 +135,7 @@ lmmstest::score_test(y = ex_data$y,
                      Z = Z,
                      Beta = Beta_null,
                      sigma = sigma,
-                     lambda =lambda,
+                     lambda = lambda,
                      lam_idx = lam_idx,
                      test_idx = 3:5)
 ```
