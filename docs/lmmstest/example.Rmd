@@ -56,10 +56,11 @@ $$
   Y_{i, t} = \beta_1 + \beta_2 X_{i, t} + U_{1, i} + U_{2, i} X_{i, t} + E_{i, t}.
 $$
 This model can be written in stacked form by letting $Y = [Y_{1, 1}, \dots,
-Y_{N, N_T}]^T$ and defining $X$ and $Z$ accordingly. In particular, $Z \in
-\mathbb{R}^{n \times 2N}$ with $n = NN_T$. The random effect $U_{1, i}$ is a
-random intercept shared by all observations from the same unit and $U_{2, i}$ is
-a random slope, also shared by observations from unit. In stacked notation,
+Y_{N, N_T}]^T$ and defining $X$, $Z$, $U$, and $E$ accordingly. In particular,
+$Z \in \mathbb{R}^{n \times 2N}$ with $n = NN_T$. The random effects $U_{1, i}
+\sim \mathcal{N}(0, \lambda_1)$ and $U_{2, i} \sim \mathcal{N}(0, \lambda_2)$
+are, respectively, a random intercept and a random slope, shared by observations
+from the same unit. In stacked notation,
 \[
   U = \begin{bmatrix} U_{1, 1} \\ U_{1, 2} \\ \vdots \\ U_{2, N}\end{bmatrix}
   \sim \mathcal{N}\left(0, \mathrm{diag}(\lambda_1, \lambda_2) \otimes
@@ -68,11 +69,10 @@ a random slope, also shared by observations from unit. In stacked notation,
 
 Consider testing the null hypothesis $(\sigma, \lambda_1, \lambda_2) = (1, 0.5,
 0)$. When $\lambda_2 = 0$, the Fisher information is singular and common test
-statistics are unreliable and the modified score test preferable. The following
-code generates one realization from the model with true parameters consistent
-with the null hypothesis and tests the null hypothesis using the proposed
-procedure. The predictors are drawn independently from a uniform distribution on
-$[-1, 2]$.
+statistics are unreliable. The following code generates one realization from the
+model with true parameters consistent with the null hypothesis and tests the
+null hypothesis using the proposed procedure. The predictors are drawn
+independently from a uniform distribution on $[-1, 2]$.
 
 ```{r}
 # For replicability
@@ -139,3 +139,16 @@ lmmstest::score_test(y = ex_data$y,
                      lam_idx = lam_idx,
                      test_idx = 3:5)
 ```
+
+# Comparison to common test statistics
+
+The following figure shows quantile-quantile plots for the modified score,
+likelihood ratio, and Wald test statistics in a simulation. Data were generated
+according to the model from the previous section assuming the null hypothesis
+$(\sigma, \lambda_1, \lambda_2) = (1, 0, 0)$ (first plot) or $(1, 0.1, 0.1)$ 
+(second figure).
+
+```{r, echo = F}
+sim_data <- 
+```
+
