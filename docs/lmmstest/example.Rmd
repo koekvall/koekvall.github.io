@@ -1,0 +1,131 @@
+---
+title: "Modified Score Test for Linear Mixed Models"
+author: "Karl Oskar Ekvall"
+output: html_document
+---
+
+# Installation
+
+The package can be installed from GitHub, using devtools.
+
+```{r}
+# devtools::install_github("koekvall/lmmstest")
+library(lmmstest)
+```
+
+
+# Setting
+
+Suppose a vector of responses $Y\in \mathbb{R}^n$, matrix of predictors $X\in
+\mathbb{R}^{n\times p}$, and design matrix $Z \in \mathbb{R}^{n\times q}$
+satisfy, for some $\beta \in \mathbb{R}^p$,
+$$
+  Y = X\beta + ZU + E,
+$$
+where $U = [U_1, \dots, U_q]^T$ is a multivariate normal vector of random
+effects with mean 0 and $E = [E_1, \dots, E_n]^T$ is multivariate normal with
+mean zero and covariance matrix $\sigma^2 I_n$, independent of $U$. Assume also
+the elements of $U$ are independent and that, for every $j \in \{1, \dots, q\}$,
+there is a $k \in \{1, \dots, d\}$ such that $\mathrm{var}(U_j) = \lambda_k^2$,
+$\lambda = [\lambda_1, \dots, \lambda_d]^T$. Thus, the elements of $\lambda$ are
+standard deviations of the random effects. Several random effects can have the
+same variance, in which case $d < q$, or each can have their own variance, and
+then $d = q$.
+
+# Background
+
+Many popular tests perform poorly when one or more of the scale parameters
+$(\sigma, \lambda)$ are near or at zero. The modified score test statistic,
+which replaces first derivatives of the log-likelihood by second when the former
+are identically zero, is an exception. The modified score test statistic is
+equal to the score test statistic standardized by expected Fisher information
+when no scale parameters are identically zero, and can be obtained as a limit
+of that test statistic otherwise. In the linear mixed model, this limit has an
+analytical expression which facilitates our implementation.
+
+# Example
+
+Suppose that for observational unit $i = 1, \dots, N$ and time
+$t = 1, \dots, N_T$,
+$$
+  Y_{i, t} = \beta_1 + \beta_2 X_{i, t} + U_{1, i} + U_{2, i} X_{i, t} + E_{i, t}.
+$$
+This model can be written in stacked form by letting $Y = [Y_{1, 1}, \dots,
+Y_{N, N_T}]^T$ and defining $X$ and $Z$ accordingly. In particular, $Z \in
+\mathbb{R}^{n \times 2N}$ with $n = NN_T$. The random effect $U_{1, i}$ is a
+random intercept shared by all observations with the same index $i$ and $U_{2,
+i}$ is a random slope. Let $\lambda_1$ and $\lambda_{2}$ be the standard
+deviations of $U_{1, i}$ and $U_{2, i}$, respectively.
+
+Consider the null hypothesis $(\sigma, \lambda_1, \lambda_2) = (1, 0.5, 0)$.
+because $\lambda_2 = 0$ under the null hypothesis, the Fisher information is
+singular and common test statistics are unreliable. The following code generates
+one realization of the model, assuming the null hypothesis, and tests this
+hypothesis using the proposed test. The predictors are drawn from a uniform
+distribution on $[-1, 2]$.
+
+```{r}
+# For replicability
+set.seed(2)
+
+# Sample size
+N <- 30
+N_T <- 10
+n <- N * N_T
+
+# True parameters
+sigma <- 1
+lambda <- c(0.5, 0)
+Beta <- c(1, 1)
+
+# Generate matrix of data where rows index units and columns index time
+XX <- matrix(runif(N * N_T, -1, 2) , nrow = N, ncol = N_T)
+U1 <- rnorm(N, sd = lambda[1])
+U2 <- rnorm(N, sd = lambda[2])
+E <- matrix(rnorm(N * N_T, sd = sigma), nrow = N, ncol = N_T)
+Y <-  Beta[1] + Beta[2] * XX + E
+for(ii in 1:N){
+  Y[ii, ] <- Y[ii, ] + U1[ii] + U2[ii] * XX[ii, ]
+}
+
+# Put data in tall format and add unit and time factors
+ex_data <- data.frame(c(t(Y)), c(t(XX)))
+ex_data$time <- rep(1:N_T, N)
+ex_data$unit <- as.factor(rep(1:N, each = N_T))
+names(ex_data)[1:2] <- c("y", "x")
+
+# Inspect data
+head(ex_data, 3)
+tail(ex_data, 3)
+
+# Create model matrices
+X <- model.matrix(~x, data = ex_data)
+Z <- model.matrix(~0 + unit + unit:x, data = ex_data)
+
+# The first N columns of Z correspond to random intercepts and
+# the next 30 to random slopes.
+dim(Z)
+lam_idx <- rep(1:2, each = N)
+L <- diag(lambda[lam_idx], 2 * N)
+
+# Get estimate of coefficient vector under the null hypothesis.
+# Since Sigma is known under the null hypothesis, this estimate is the
+# generalized least squares estimate.
+Sigma_null <- diag(sigma^2, n) + Z %*% L^2 %*% t(Z)
+Beta_null <- c(qr.solve(crossprod(X, qr.solve(Sigma_null, X)),
+                      crossprod(X, qr.solve(Sigma_null, ex_data$y))))
+Beta_null
+
+# Compute modified score test statistic for elements 3:5 of theta =
+# c(Beta, sigma, lambda[1], lambda_2), i.e. for (sigma, lambda[1], lambda_2).
+# The supplied arguments for  (sigma, lambda[1], lambda_2) are the true values,
+# so the null hypothesis is true.
+lmmstest::score_test(y = ex_data$y,
+                     X = X,
+                     Z = Z,
+                     Beta = Beta_null,
+                     sigma = sigma,
+                     lambda =lambda,
+                     lam_idx = lam_idx,
+                     test_idx = 3:5)
+```
