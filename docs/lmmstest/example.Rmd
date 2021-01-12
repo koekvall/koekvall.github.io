@@ -144,7 +144,7 @@ lmmstest::score_test(y = ex_data$y,
 # Comparison to common test statistics
 
 The following figure shows quantile-quantile plots for the modified score
-(circles), likelihood ratio (triangles), and Wald (plus sign) test statistics
+(circles), likelihood ratio (triangles), and Wald (plus signs) test statistics
 from a simulation. The theoretical quantiles are from a chi-square distribution
 with 3 degrees of freedom. Data were generated according to the model from the
 previous section assuming the null hypothesis $(\sigma, \lambda_1, \lambda_2) =
