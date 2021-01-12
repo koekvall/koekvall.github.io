@@ -43,7 +43,7 @@ surely. The modified score test addresses this by replacing such elements,
 which are first order partial derivatives of the log-likelihood, by second
 order partial derivatives. When no scale parameter is equal to zero the
 modified score test statistic is the same as the usual score test statistic
-standardized by expected Fisher information; and when one or more scale
+standardized by expected Fisher information; when one or more scale
 parameters are equal to zero the modified statistic can be defined as a limit
 of the usual one.  In the linear mixed model, this limit has an
 analytical expression which facilitates our implementation.
