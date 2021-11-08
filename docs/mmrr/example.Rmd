@@ -1,9 +1,3 @@
----
-title: "Mixed-type multivariate response regression"
-author: "Karl Oskar Ekvall"
-output: html_document
----
-
 # Overview
 
 The package provides approximate maximum likelihood estimation of regression coefficients and an unstructured covariance matrix parameterizing dependence between responses of mixed types. A function for approximate likelihood-ratio testing is also included.
