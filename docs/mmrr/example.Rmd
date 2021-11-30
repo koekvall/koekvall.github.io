@@ -26,7 +26,9 @@ If $y_{ij}$ is a Bernoulli response, $\psi_j = 1$ and $\Sigma_{jj}  = 1$ is enfo
 
 # Example
 
-We generate $n = 100$ observations of a $3$-dimensional response vector and then fit the model. The matrix of predictors is of size $nr\times p$, where the first $r$ rows correspond to the design matrix $X_1$ for the response vector $y_1$, the next $r$ rows correspond to $X_2$, and so on. That is, $X$ is the design matrix for the vector of all responses $[y_1', \dots, y_n']' \in \mathbb{R}^{nr}$. We take $X_i = I_3$, the $3\times 3$ identity matrix, corresponding to a separate intercept for each of the three responses. The responses are stored in an $n\times r$ matrix where the $i$th row is the $i$th response vector. The first response is normal, the second Bernoulli, and the third Poisson (conditionally on the latent vector).
+## Model fitting
+
+We generate $n = 1000$ observations of a $3$-dimensional response vector and then fit the model. The matrix of predictors is of size $nr\times p$, where the first $r$ rows correspond to the design matrix $X_1$ for the response vector $y_1$, the next $r$ rows correspond to $X_2$, and so on. That is, $X$ is the design matrix for the vector of all responses $[y_1', \dots, y_n']' \in \mathbb{R}^{nr}$. We take $X_i = I_3$, the $3\times 3$ identity matrix, corresponding to a separate intercept for each of the three responses. The responses are stored in an $n\times r$ matrix where the $i$th row is the $i$th response vector. The first response is normal, the second Bernoulli, and the third Poisson (conditionally on the latent vector).
 
 ```{r}
 library(mmrr)
@@ -50,6 +52,8 @@ fit$Beta
 fit$Sigma
 ```
 
+## Testing
+
 Suppose we want to test whether the Normal and Bernoulli variable are independent. That is equivalent to testing whether $\Sigma_{12} = \Sigma_{21} = 0$. We fit the null model by incorporating the elementwise restrictions on $\Sigma$ using the argument $M$. We also restrict $\Sigma_{22} = 1$ for identifiability because the second response is Bernoulli (this restriction is automatic when the user does not supply $M$).
 
 ```{r}
@@ -69,6 +73,7 @@ fit_null$Sigma
 lrt_approx(fit_null = fit_null, fit_full = fit)
 ```
 
+## Marginal moments
 Because the predictors (an intercept only) do not depend on $i$, the marginal moments of the $y_i \in \mathbb{R}^3$ do not depend on $i$. With the estimates of $\beta$ and $\Sigma$, we can get an estimate of the mean vector and covariance matrix of the $y_i$ as follows.
 
 ```{r}
@@ -79,16 +84,16 @@ mean_y <- predict_mmr(X = diag(3), Beta = Beta0,
 cov_y <- cov_mmrr(X = diag(3), Beta = Beta0, Sigma = Sigma0, psi = psi,
                   type = type, num_nodes = 10)
 
+# Estimates of marginal moments
 mean_y_hat <- predict_mmr(X = diag(3), Beta = fit$Beta,
                       sigma = sqrt(diag(fit$Sigma)),
                       type = type, num_nodes = 10)
 cov_y_hat <- cov_mmrr(X = diag(3), Beta = fit$Beta, Sigma = fit$Sigma, psi = psi,
                   type = type, num_nodes = 10)
 
-
+# Compare
 mean_y; mean_y_hat
 
 cov_y; cov_y_hat
-
 ```
 

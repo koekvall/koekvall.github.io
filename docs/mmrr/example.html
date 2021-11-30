@@ -190,7 +190,9 @@ library(mmrr)</code></pre>
 </div>
 <div id="example" class="section level1">
 <h1>Example</h1>
-<p>We generate <span class="math inline">\(n = 100\)</span> observations of a <span class="math inline">\(3\)</span>-dimensional response vector and then fit the model. The matrix of predictors is of size <span class="math inline">\(nr\times p\)</span>, where the first <span class="math inline">\(r\)</span> rows correspond to the design matrix <span class="math inline">\(X_1\)</span> for the response vector <span class="math inline">\(y_1\)</span>, the next <span class="math inline">\(r\)</span> rows correspond to <span class="math inline">\(X_2\)</span>, and so on. That is, <span class="math inline">\(X\)</span> is the design matrix for the vector of all responses <span class="math inline">\([y_1&#39;, \dots, y_n&#39;]&#39; \in \mathbb{R}^{nr}\)</span>. We take <span class="math inline">\(X_i = I_3\)</span>, the <span class="math inline">\(3\times 3\)</span> identity matrix, corresponding to a separate intercept for each of the three responses. The responses are stored in an <span class="math inline">\(n\times r\)</span> matrix where the <span class="math inline">\(i\)</span>th row is the <span class="math inline">\(i\)</span>th response vector. The first response is normal, the second Bernoulli, and the third Poisson (conditionally on the latent vector).</p>
+<div id="model-fitting" class="section level2">
+<h2>Model fitting</h2>
+<p>We generate <span class="math inline">\(n = 1000\)</span> observations of a <span class="math inline">\(3\)</span>-dimensional response vector and then fit the model. The matrix of predictors is of size <span class="math inline">\(nr\times p\)</span>, where the first <span class="math inline">\(r\)</span> rows correspond to the design matrix <span class="math inline">\(X_1\)</span> for the response vector <span class="math inline">\(y_1\)</span>, the next <span class="math inline">\(r\)</span> rows correspond to <span class="math inline">\(X_2\)</span>, and so on. That is, <span class="math inline">\(X\)</span> is the design matrix for the vector of all responses <span class="math inline">\([y_1&#39;, \dots, y_n&#39;]&#39; \in \mathbb{R}^{nr}\)</span>. We take <span class="math inline">\(X_i = I_3\)</span>, the <span class="math inline">\(3\times 3\)</span> identity matrix, corresponding to a separate intercept for each of the three responses. The responses are stored in an <span class="math inline">\(n\times r\)</span> matrix where the <span class="math inline">\(i\)</span>th row is the <span class="math inline">\(i\)</span>th response vector. The first response is normal, the second Bernoulli, and the third Poisson (conditionally on the latent vector).</p>
 <pre class="r"><code>library(mmrr)
 
 # Generate data
@@ -215,6 +217,9 @@ fit$Beta</code></pre>
 ## [1,] 1.1207677 1.0586465 0.7297418
 ## [2,] 1.0586465 1.0000002 0.6867352
 ## [3,] 0.7297418 0.6867352 0.6821870</code></pre>
+</div>
+<div id="testing" class="section level2">
+<h2>Testing</h2>
 <p>Suppose we want to test whether the Normal and Bernoulli variable are independent. That is equivalent to testing whether <span class="math inline">\(\Sigma_{12} = \Sigma_{21} = 0\)</span>. We fit the null model by incorporating the elementwise restrictions on <span class="math inline">\(\Sigma\)</span> using the argument <span class="math inline">\(M\)</span>. We also restrict <span class="math inline">\(\Sigma_{22} = 1\)</span> for identifiability because the second response is Bernoulli (this restriction is automatic when the user does not supply <span class="math inline">\(M\)</span>).</p>
 <pre class="r"><code>M &lt;- matrix(NA, 3, 3) # NA means no restriction
 M[1, 2] &lt;- M[2, 1] &lt;- 0 # Set covariance restriction
@@ -238,12 +243,15 @@ fit_null$Sigma</code></pre>
 lrt_approx(fit_null = fit_null, fit_full = fit)</code></pre>
 <pre><code>## $stat
 ## [1] 87.55901
-## 
+##
 ## $p
 ## [1] 8.180226e-21
-## 
+##
 ## $df
 ## [1] 1</code></pre>
+</div>
+<div id="marginal-moments" class="section level2">
+<h2>Marginal moments</h2>
 <p>Because the predictors (an intercept only) do not depend on <span class="math inline">\(i\)</span>, the marginal moments of the <span class="math inline">\(y_i \in \mathbb{R}^3\)</span> do not depend on <span class="math inline">\(i\)</span>. With the estimates of <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\Sigma\)</span>, we can get an estimate of the mean vector and covariance matrix of the <span class="math inline">\(y_i\)</span> as follows.</p>
 <pre class="r"><code># True marginal moments
 mean_y &lt;- predict_mmr(X = diag(3), Beta = Beta0,
@@ -252,13 +260,14 @@ mean_y &lt;- predict_mmr(X = diag(3), Beta = Beta0,
 cov_y &lt;- cov_mmrr(X = diag(3), Beta = Beta0, Sigma = Sigma0, psi = psi,
                   type = type, num_nodes = 10)
 
+# Estimates of marginal moments
 mean_y_hat &lt;- predict_mmr(X = diag(3), Beta = fit$Beta,
                       sigma = sqrt(diag(fit$Sigma)),
                       type = type, num_nodes = 10)
 cov_y_hat &lt;- cov_mmrr(X = diag(3), Beta = fit$Beta, Sigma = fit$Sigma, psi = psi,
                   type = type, num_nodes = 10)
 
-
+# Compare
 mean_y; mean_y_hat</code></pre>
 <pre><code>##           [,1]      [,2]    [,3]
 ## [1,] 0.1716006 0.3064572 1.09142</code></pre>
@@ -273,6 +282,7 @@ mean_y; mean_y_hat</code></pre>
 ## [1,] 2.1207677 0.1988696 1.0051650
 ## [2,] 0.1988696 0.2245480 0.1884523
 ## [3,] 1.0051650 0.1884523 3.2333638</code></pre>
+</div>
 </div>
 
 
