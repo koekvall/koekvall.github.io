@@ -1,5 +1,5 @@
 :root {
-  --font-family-sans:       'Roboto', Arial, sans-serif, -apple-system;
+  --font-family-sans:       -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   --font-family-serif:      'Lora', Arial, sans-serif, -apple-system;
   --font-family-monospace:  'Roboto Mono', monospace;
   --font-family-cursive:    cursive;
@@ -7,7 +7,7 @@
   /* an ideal reading width - 48rem - 768px based off 16px:1rem */
   /* 42 is an interesting number. ;-) */
   /* remember to set this to media-queries too if you are not handling it separately */
-  --body-width: 42rem;
+  --body-width: 54rem;
 
   /* default: minor third scale progression */
   --typescale-body: 1.2;
@@ -47,7 +47,7 @@
   --font-family: var(--font-family-sans);
   --font-family-headings: var(--font-family-sans);
 
-  --font-size: 14px;
+  --font-size: 16px;
   --font-size-small: 85%;
   --font-size-smaller: 70%;
   --font-size-smallest: 65%;
