@@ -1,0 +1,11 @@
+{% if site.data.nav %}
+<nav>
+  {% for menu in site.data.nav -%}
+    {% if menu.url contains "://" -%}
+      <a href="{{ menu.url }}">{{ menu.title }}</a>
+    {% else -%}
+      <a href="{{ site.baseurl | prepend: site.url }}{{ menu.url }}">{{ menu.title }}</a>
+    {% endif -%}
+  {% endfor -%}
+</nav>
+{% endif %}
