@@ -15,8 +15,10 @@ layout: page
 I am an Assistant Professor in the [Department of
 Statistics](https://stat.ufl.edu/) at [University of Florida](https://ufl.edu).
 I develop [theory and methods](/research/) for reliable inference in nonstandard
-settings, such as mixed models with variance parameters near zero, and
-[software](/software/) implementing them.
+settings, such as when a parameter is near the boundary, the information is
+singular, or the dependence is complex. Much of my work is motivated by mixed
+models. I also work on high-dimensional regression and covariance estimation,
+and I write [software](/software/) implementing the methods.
 
 Previously I was an Assistant Professor in Biostatistics at
 [Karolinska Institutet](https://www.imm.ki.se/biostatistics/) and a post-doc at

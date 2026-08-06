@@ -4,10 +4,19 @@ title: 'Research'
 permalink: /research/
 ---
 
-My research focuses on reliable inference in nonstandard settings with, for example,
-complex dependence, parameters near the boundary, or singular Fisher information. I develop
-theory, methods, and computationally efficient software implementing the proposed methods. I
-regularly collaborate with researchers in biomedicine, psychology, and economics.
+Standard likelihood asymptotics rely on conditions that are inappropriate in many
+models used in practice: a parameter can lie near the boundary of its set, the
+information can be singular, or the observations can be strongly dependent.
+Tests and confidence intervals based on the usual approximations are then
+unreliable, sometimes badly so. I develop alternatives that remain valid in these
+settings, algorithms that make them practical, and R packages implementing them.
+
+A second line of work is on high-dimensional regression and covariance
+estimation, including targeted principal components regression and covariance
+estimation with compositional data. Ongoing work concerns quantile regression.
+
+I regularly collaborate with researchers in biomedicine, psychology, and
+economics.
 
 # Articles
 ## Theory and methods
