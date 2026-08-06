@@ -13,9 +13,8 @@ layout: page
 {: refdef}
 
 I am an Assistant Professor in the [Department of
-Statistics](https://stat.ufl.edu/) at [University of Florida](https://ufl.edu)
-and an affiliated researcher at [Karolinska
-Institutet](https://www.imm.ki.se/biostatistics/). I am currently an Associate
+Statistics](https://stat.ufl.edu/) at [University of Florida](https://ufl.edu).
+I am currently an Associate
 Editor of [Statistics and Probability Letters](https://www.sciencedirect.com/journal/statistics-and-probability-letters/).
 
 Before coming to UF, I was an Assistant Professor in Biostatistics at
