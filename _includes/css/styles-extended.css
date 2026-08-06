@@ -361,7 +361,28 @@ figure.highlight code {
   color: var(--text-color-alt);
 }
 
+/* headshot on the home page: centered above the intro on small screens,
+   floated beside it on larger ones */
+.headshot {
+  display: block;
+  max-width: 180px;
+  border-radius: 8px;
+  margin: 0.3rem auto var(--space-base);
+}
+
+@media (min-width: $breakpoint-medium) {
+  .headshot {
+    float: left;
+    margin: 0.3rem 2rem var(--space-half) 0;
+  }
+}
+
 /* UTILITIES --------------------------------------- */
+
+/* start below any floated element (e.g. the headshot) */
+.clear {
+  clear: both;
+}
 
 /* clamp content to one line */
 .one-liner {

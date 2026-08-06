@@ -1,14 +1,14 @@
 ---
 layout: page
+title: 'Teaching'
 permalink: /teaching/
 ---
-
-# Teaching
 
 ## University of Florida
 
 | Term | Course | Title |
 |------|--------|-------|
+| Fall 2026 | STA 6275 | Statistical Computing I |
 | Spring 2026 | STA 4702 / STA 5701 | Applied Multivariate Statistical Analysis |
 | Fall 2025 | STA 4241 | Statistical Learning |
 | Spring 2025 | STA 4321 / STA 5325 | Introduction to Probability / Foundations of Probability |

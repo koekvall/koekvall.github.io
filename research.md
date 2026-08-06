@@ -4,22 +4,25 @@ title: 'Research'
 permalink: /research/
 ---
 
-Standard likelihood asymptotics rely on conditions that are inappropriate in many
-models used in practice: a parameter can lie near the boundary of its set, the
+Standard likelihood asymptotics rely on regularity conditions that are inappropriate in many
+models used in practice: a parameter can lie near the boundary of the parameter set, the
 information can be singular, or the observations can be strongly dependent.
-Tests and confidence intervals based on the usual approximations are then
+Inference based on the usual approximations is then
 unreliable, sometimes badly so. I develop alternatives that remain valid in these
-settings, algorithms that make them practical, and R packages implementing them.
+settings, algorithms that make them practical, and R packages that implement
+them.
 
-A second line of work is on high-dimensional regression and covariance
-estimation, including targeted principal components regression and covariance
-estimation with compositional data. Ongoing work concerns quantile regression.
+A second line of work concerns high-dimensional regression and covariance
+estimation, for example targeted principal components regression and estimation
+with compositional data.
 
 I regularly collaborate with researchers in biomedicine, psychology, and
 economics.
 
-# Articles
-## Theory and methods
+## Articles
+<small class="pub-meta">\* denotes Ph.D. advisee</small>
+
+### Theory and methods
 
 Asymptotics for likelihood ratio tests of boundary points with singular information and unidentifiable nuisance parameters. K.O. Ekvall, [O.G.H. Hössjer](https://www.su.se/english/profiles/o/ohssj), [M. Bottai](https://ki.se/en/people/matteo-bottai), and [J.M.P. Albin](https://www.chalmers.se/en/persons/palbin/).\
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2605.08471)</small>
@@ -28,7 +31,7 @@ Likelihood-based inference with separable correlation matrices. K.O. Ekvall.\
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/1805.00318) | [Code](https://github.com/koekvall/sepcor-suppl) | [R package](https://github.com/koekvall/sepcor)</small>
 
 Universal inference for variance components.
-Y. Zhang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
+Y. Zhang\*, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
 <small class="pub-meta">*[Stat, 2026](https://doi.org/10.1002/sta4.70141)* · [arXiv](https://arxiv.org/abs/2509.00255) | [Code](https://github.com/koekvall/univ_vc_suppl)</small>
 
 Uniform inference in linear mixed models.
@@ -36,7 +39,7 @@ K.O. Ekvall and [M. Bottai](https://ki.se/en/people/matteo-bottai).\
 <small class="pub-meta">*[Biometrika, 2026](https://doi.org/10.1093/biomet/asaf079)* · [arXiv](https://arxiv.org/abs/2507.19633) | [Supplement](/files/suppl_uniform_lmm.pdf) | [Code](https://github.com/koekvall/uniform_lmm_suppl)</small>
 
 Fast and reliable confidence intervals for a variance component.
-Y. Zhang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
+Y. Zhang\*, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
 <small class="pub-meta">*[Biometrika, 2025](https://doi.org/10.1093/biomet/asaf010)* · [arXiv](https://arxiv.org/abs/2404.15060) | [Supplement](/files/varcomp_supp_plain.pdf) | [Code](https://github.com/koekvall/varcomp-suppl) | [R package](https://github.com/yqzhang5972/lmmvar/)</small>
 
 Direct covariance matrix estimation with compositional data. [A.J. Molstad](https://ajmolstad.github.io/), K.O. Ekvall, and [Piotr M. Suder](https://scholars.duke.edu/person/piotr.suder).\
@@ -63,7 +66,7 @@ Consistent maximum likelihood estimation using subsets with applications to mult
 Markov chain Monte Carlo. K.O. Ekvall and [G.L. Jones](https://galinj.github.io).\
 <small class="pub-meta">*[Wiley StatsRef, 2019](https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat07189.pub2)* · [PDF](/files/intro_mcmc_updated.pdf)</small>
 
-## Applications
+### Applications
 
 Validation and comparison of two prearrest prediction scores for in-hospital cardiac arrest survival.
 H. Karim, E. Piscator, K.O. Ekvall, G. Riva, K.G. Lauridsen, and T. Djärv.\
@@ -77,3 +80,36 @@ Mediation by thyroid hormone in the relationships between gestational exposure
 to methylmercury and birth size. K. Gustin, K.O. Ekvall, M. Barman, B. Jacobsson,
 A. Sandin, A.S. Sandberg, A.E. Wold, M. Vahter, and M. Kippler.\
 <small class="pub-meta">*[Exposure and Health, 2023](https://link.springer.com/article/10.1007/s12403-023-00556-x)*</small>
+
+## Working papers
+
+Score-based confidence intervals for variance-covariance parameters in linear
+mixed models. M. Shedden\* and K.O. Ekvall.
+
+Profile score asymptotics under near-boundary parameter sequences.
+M. Shedden\* and K.O. Ekvall.
+
+Large covariance matrix estimation with spectral transfer learning.
+X. Wang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).
+
+Fast algorithms for semi-supervised noncrossing multiple quantile regression in
+high dimensions. Y. Kwon, K.O. Ekvall, B. Sherwood, and
+[A.J. Molstad](https://ajmolstad.github.io/).
+
+Evaluating multiple-context training to mitigate resurgence during context
+changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
+M.S. Lamperski, T. Kuroda, K.O. Ekvall, and
+[C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).
+
+Evaluating control conditions when testing for resurgence. C.N. Martinez-Perez,
+K.L. Montague, C.M. Ritchey, A.G. Barnhart, T. Kuroda, S.P. Gilroy,
+K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).
+
+Context change enhances resurgence with downshifts in alternative
+reinforcement. D. Avila-Rozo, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and
+[C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).
+
+Contingency discrimination: Evaluation of the effects of music and a
+contingency-discrimination criterion on resurgence. A.M. Villalobos,
+D. Avila-Rozo, A. Molnar, G. Tirado, T. Kuroda, K.O. Ekvall, and
+[C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).

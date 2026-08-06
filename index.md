@@ -8,32 +8,33 @@
 layout: page
 ---
 
-{:refdef: style="text-align: center;"}
-![Karl Oskar Ekvall]({{ site.baseurl }}/images/headshot.jpg){: style="max-width: 200px; border-radius: 50%;"}
-{: refdef}
+![Karl Oskar Ekvall]({{ site.baseurl }}/images/headshot.jpg){: class="headshot"}
 
 I am an Assistant Professor in the [Department of
-Statistics](https://stat.ufl.edu/) at [University of Florida](https://ufl.edu).
+Statistics](https://stat.ufl.edu/) at the [University of Florida](https://ufl.edu).
 I develop [theory and methods](/research/) for reliable inference in nonstandard
 settings, such as when a parameter is near the boundary, the information is
 singular, or the dependence is complex. Much of my work is motivated by mixed
 models. I also work on high-dimensional regression and covariance estimation,
-and I write [software](/software/) implementing the methods.
+and write [software](/software/) implementing the methods.
 
 Previously I was an Assistant Professor in Biostatistics at
-[Karolinska Institutet](https://www.imm.ki.se/biostatistics/) and a post-doc at
+[Karolinska Institutet](https://www.imm.ki.se/biostatistics/) and a postdoc at
 [TU Wien](https://institute.tuwien.ac.at/astat/home/EN/). I hold a Ph.D. in
 Statistics from the [University of Minnesota](https://cla.umn.edu/statistics),
-and a B.Sc. in Economics and M.Sc. in Finance from the [University of
+and a B.Sc. in Economics and an M.Sc. in Finance from the [University of
 Gothenburg](https://www.gu.se/en/school-business-economics-law/economics).
+{: .clear}
 
 I serve as an Associate Editor of [Statistics and Probability
 Letters](https://www.sciencedirect.com/journal/statistics-and-probability-letters/).
 
 [CV (pdf)](/files/ekvall_cv.pdf) |
 [Google Scholar](https://scholar.google.com/citations?user=M-cEpXAAAAAJ) |
+[GitHub](https://github.com/koekvall/) |
 [ORCID](https://orcid.org/0000-0001-8085-4353) |
 [LinkedIn](https://www.linkedin.com/in/karl-oskar-ekvall-000/)
 
-Contact me at [k.ekvall@ufl.edu](mailto:k.ekvall@ufl.edu).
+Contact me at [k.ekvall@ufl.edu](mailto:k.ekvall@ufl.edu). My office is 205
+Griffin-Floyd Hall, University of Florida.
 

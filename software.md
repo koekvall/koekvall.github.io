@@ -4,8 +4,6 @@ title: 'Software'
 permalink: /software/
 ---
 
-# Software
-
 R packages developed as part of my research.
 
 [**sepcor**](https://github.com/koekvall/sepcor) --
