@@ -28,7 +28,7 @@ Asymptotics for likelihood ratio tests of boundary points with singular informat
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2605.08471)</small>
 
 Likelihood-based inference with separable correlation matrices. K.O. Ekvall.\
-<small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/1805.00318) | [Code](https://github.com/koekvall/sepcor-suppl) | [R package](https://github.com/koekvall/sepcor)</small>
+<small class="pub-meta">*Stat*, in press · [arXiv](https://arxiv.org/abs/1805.00318) | [Code](https://github.com/koekvall/sepcor-suppl) | [R package](https://github.com/koekvall/sepcor)</small>
 
 Universal inference for variance components.
 Y. Zhang\*, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
