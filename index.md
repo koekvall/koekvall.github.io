@@ -11,12 +11,13 @@ layout: page
 ![Karl Oskar Ekvall]({{ site.baseurl }}/images/headshot.jpg){: class="headshot"}
 
 I am an Assistant Professor in the [Department of
-Statistics](https://stat.ufl.edu/) at the [University of Florida](https://ufl.edu).
-I develop [theory and methods](/research/) for reliable inference in nonstandard
-settings, such as when a parameter is near the boundary, the information is
-singular, or the dependence is complex. Much of my work is motivated by mixed
-models. I also work on high-dimensional regression and covariance estimation,
-and write [software](/software/) implementing the methods.
+Statistics](https://stat.ufl.edu/) at the [University of
+Florida](https://ufl.edu). I work on [reliable inference in nonstandard
+settings](/research/), such as when a parameter is near the boundary, the
+information is singular, or the dependence is complex. Much of my research is
+motivated by mixed models. I also work on high-dimensional regression and
+covariance estimation, and write [software](/software/) implementing the
+methods.
 
 Previously I was an Assistant Professor in Biostatistics at
 [Karolinska Institutet](https://www.imm.ki.se/biostatistics/) and a postdoc at
