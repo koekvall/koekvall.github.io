@@ -4,20 +4,6 @@ title: 'Research'
 permalink: /research/
 ---
 
-Standard likelihood asymptotics rely on regularity conditions that are
-inappropriate in many models used in practice: there may be parameters near
-the boundary, singular information, or strongly dependent observations.
-Inference based on the usual approximations is then unreliable, sometimes
-badly so. I develop theory and methods that remain valid in such settings,
-algorithms that make them practical, and R packages implementing them.
-
-A second line of work concerns high-dimensional regression and covariance
-estimation, for example targeted principal components regression and estimation
-with compositional data.
-
-I regularly collaborate with researchers in biomedicine, psychology, and
-economics.
-
 ## Articles
 <small class="pub-meta">\* denotes Ph.D. advisee</small>
 

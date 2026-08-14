@@ -12,12 +12,13 @@ layout: page
 
 I am an Assistant Professor in the [Department of
 Statistics](https://stat.ufl.edu/) at the [University of
-Florida](https://ufl.edu). I work on [reliable inference in nonstandard
-settings](/research/), such as when a parameter is near the boundary, the
-information is singular, or the dependence is complex. Much of my research is
-motivated by mixed models. I also work on high-dimensional regression and
-covariance estimation, and write [software](/software/) implementing the
-methods.
+Florida](https://ufl.edu). I work on asymptotic theory and computational
+statistics, often for multivariate or high-dimensional problems. My focus
+within these is likelihood-based inference in nonstandard settings: singular
+information, near-boundary parameters, and complex dependence. Mixed models,
+where all three arise, motivate much of this work. I develop both the theory
+and the [R packages](/software/) implementing the methods, and regularly
+collaborate with researchers in biomedicine, psychology, and economics.
 
 Previously I was an Assistant Professor in Biostatistics at
 [Karolinska Institutet](https://www.imm.ki.se/biostatistics/) and a postdoc at
