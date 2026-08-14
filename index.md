@@ -12,8 +12,8 @@ layout: page
 
 I am an Assistant Professor in the [Department of
 Statistics](https://stat.ufl.edu/) at the [University of
-Florida](https://ufl.edu). I work on asymptotic theory and computational
-statistics, often for multivariate or high-dimensional problems. My focus
+Florida](https://ufl.edu). I work in asymptotic theory and computational
+statistics, often on multivariate or high-dimensional problems. My focus
 within these is likelihood-based inference in nonstandard settings: singular
 information, near-boundary parameters, and complex dependence. Mixed models,
 where all three arise, motivate much of this work. I develop both the theory
