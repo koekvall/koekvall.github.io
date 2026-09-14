@@ -61,6 +61,11 @@ Brief stimulus changes signaling extinction enhance resurgence.
 C.N. Martinez-Perez, J. Williams, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
 <small class="pub-meta">*Submitted*</small>
 
+Evaluating multiple-context training to mitigate resurgence during context
+changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
+M.S. Lamperski, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
+<small class="pub-meta">*Submitted*</small>
+
 Mediation by thyroid hormone in the relationships between gestational exposure 
 to methylmercury and birth size. K. Gustin, K.O. Ekvall, M. Barman, B. Jacobsson,
 A. Sandin, A.S. Sandberg, A.E. Wold, M. Vahter, and M. Kippler.\
@@ -80,11 +85,6 @@ X. Wang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).
 Fast algorithms for semi-supervised noncrossing multiple quantile regression in
 high dimensions. Y. Kwon, K.O. Ekvall, B. Sherwood, and
 [A.J. Molstad](https://ajmolstad.github.io/).
-
-Evaluating multiple-context training to mitigate resurgence during context
-changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
-M.S. Lamperski, T. Kuroda, K.O. Ekvall, and
-[C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).
 
 Evaluating control conditions when testing for resurgence. C.N. Martinez-Perez,
 K.L. Montague, C.M. Ritchey, A.G. Barnhart, T. Kuroda, S.P. Gilroy,
