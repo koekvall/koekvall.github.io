@@ -53,10 +53,6 @@ Markov chain Monte Carlo. K.O. Ekvall and [G.L. Jones](https://galinj.github.io)
 
 ### Applications
 
-Validation and comparison of two prearrest prediction scores for in-hospital cardiac arrest survival.
-H. Karim, E. Piscator, K.O. Ekvall, G. Riva, K.G. Lauridsen, and T. Djärv.\
-<small class="pub-meta">*Submitted*</small>
-
 Brief stimulus changes signaling extinction enhance resurgence.
 C.N. Martinez-Perez, J. Williams, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
 <small class="pub-meta">*Submitted*</small>
@@ -65,6 +61,10 @@ Evaluating multiple-context training to mitigate resurgence during context
 changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
 M.S. Lamperski, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
 <small class="pub-meta">*Submitted*</small>
+
+Validation and comparison of two prearrest prediction scores for in-hospital cardiac arrest survival.
+H. Karim, E. Piscator, G. Riva, K.O. Ekvall, K.G. Lauridsen, and T. Djärv.\
+<small class="pub-meta">*[Resuscitation Plus, 2026](https://doi.org/10.1016/j.resplu.2026.101493)*</small>
 
 Mediation by thyroid hormone in the relationships between gestational exposure 
 to methylmercury and birth size. K. Gustin, K.O. Ekvall, M. Barman, B. Jacobsson,
