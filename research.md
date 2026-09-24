@@ -86,6 +86,10 @@ Fast algorithms for semi-supervised noncrossing multiple quantile regression in
 high dimensions. Y. Kwon, K.O. Ekvall, B. Sherwood, and
 [A.J. Molstad](https://ajmolstad.github.io/).
 
+Nonparametric accelerated failure time models with application to multi-omic
+survival analysis. K.M. Gelis-Cadena, K.O. Ekvall, and
+[A.J. Molstad](https://ajmolstad.github.io/).
+
 Evaluating control conditions when testing for resurgence. C.N. Martinez-Perez,
 K.L. Montague, C.M. Ritchey, A.G. Barnhart, T. Kuroda, S.P. Gilroy,
 K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).
