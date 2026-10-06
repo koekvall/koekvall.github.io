@@ -9,6 +9,10 @@ permalink: /research/
 
 ### Theory and methods
 
+Score-based confidence intervals for variance-covariance parameters in linear mixed models.
+M. Shedden\* and K.O. Ekvall.\
+<small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2610.04181) | [Code](https://github.com/koekvall/reconf-suppl) | [R package](https://github.com/koekvall/reconf)</small>
+
 Asymptotics for likelihood ratio tests of boundary points with singular information and unidentifiable nuisance parameters. K.O. Ekvall, [O.G.H. Hössjer](https://www.su.se/english/profiles/o/ohssj), [M. Bottai](https://ki.se/en/people/matteo-bottai), and [J.M.P. Albin](https://www.chalmers.se/en/persons/palbin/).\
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2605.08471)</small>
 
@@ -72,9 +76,6 @@ A. Sandin, A.S. Sandberg, A.E. Wold, M. Vahter, and M. Kippler.\
 <small class="pub-meta">*[Exposure and Health, 2023](https://link.springer.com/article/10.1007/s12403-023-00556-x)*</small>
 
 ## Working papers
-
-Score-based confidence intervals for variance-covariance parameters in linear
-mixed models. M. Shedden\* and K.O. Ekvall.
 
 Profile score asymptotics under near-boundary parameter sequences.
 M. Shedden\* and K.O. Ekvall.
