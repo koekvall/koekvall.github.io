@@ -59,7 +59,7 @@ Markov chain Monte Carlo. K.O. Ekvall and [G.L. Jones](https://galinj.github.io)
 
 Brief stimulus changes signaling extinction enhance resurgence.
 C.N. Martinez-Perez, J. Williams, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
-<small class="pub-meta">*Submitted*</small>
+<small class="pub-meta">*Journal of the Experimental Analysis of Behavior*, in press</small>
 
 Evaluating multiple-context training to mitigate resurgence during context
 changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
