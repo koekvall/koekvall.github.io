@@ -9,6 +9,10 @@ permalink: /research/
 
 ### Theory and methods
 
+Near-boundary asymptotics for profile score statistics.
+M. Shedden\* and K.O. Ekvall.\
+<small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2610.33912)</small>
+
 Score-based confidence intervals for variance-covariance parameters in linear mixed models.
 M. Shedden\* and K.O. Ekvall.\
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2610.04181) | [R package](https://github.com/koekvall/reconf)</small>
@@ -76,9 +80,6 @@ A. Sandin, A.S. Sandberg, A.E. Wold, M. Vahter, and M. Kippler.\
 <small class="pub-meta">*[Exposure and Health, 2023](https://link.springer.com/article/10.1007/s12403-023-00556-x)*</small>
 
 ## Working papers
-
-Profile score asymptotics under near-boundary parameter sequences.
-M. Shedden\* and K.O. Ekvall.
 
 Large covariance matrix estimation with spectral transfer learning.
 X. Wang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).
