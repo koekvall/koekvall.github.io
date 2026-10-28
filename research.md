@@ -9,6 +9,10 @@ permalink: /research/
 
 ### Theory and methods
 
+Nonparametric accelerated failure time models with application to multi-view survival analysis.
+K.M. Gelis-Cadena, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).\
+<small class="pub-meta">*Submitted*</small>
+
 Near-boundary asymptotics for profile score statistics.
 M. Shedden\* and K.O. Ekvall.\
 <small class="pub-meta">*Submitted* · [arXiv](https://arxiv.org/abs/2610.33912)</small>
@@ -86,10 +90,6 @@ X. Wang, K.O. Ekvall, and [A.J. Molstad](https://ajmolstad.github.io/).
 
 Fast algorithms for semi-supervised noncrossing multiple quantile regression in
 high dimensions. Y. Kwon, K.O. Ekvall, B. Sherwood, and
-[A.J. Molstad](https://ajmolstad.github.io/).
-
-Nonparametric accelerated failure time models with application to multi-omic
-survival analysis. K.M. Gelis-Cadena, K.O. Ekvall, and
 [A.J. Molstad](https://ajmolstad.github.io/).
 
 Evaluating control conditions when testing for resurgence. C.N. Martinez-Perez,
