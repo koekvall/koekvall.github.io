@@ -377,6 +377,38 @@ figure.highlight code {
   }
 }
 
+/* tables (the teaching page): top-aligned cells and no line breaks inside a
+   term or course number */
+table th,
+table td {
+  padding: var(--space-quarter) var(--space-base) var(--space-quarter) 0;
+  vertical-align: top;
+}
+
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
+}
+
+table th:not(:last-child),
+table td:not(:last-child) {
+  white-space: nowrap;
+}
+
+table th {
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+/* each term is its own tbody: a rule above it, and a cross-listed course
+   tucked under the row it continues */
+table tbody tr:first-child td {
+  border-top: var(--border-width) solid var(--border-color);
+}
+
+table tbody tr + tr td {
+  padding-top: 0;
+}
+
 /* UTILITIES --------------------------------------- */
 
 /* start below any floated element (e.g. the headshot) */
