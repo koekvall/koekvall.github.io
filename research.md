@@ -65,14 +65,14 @@ Markov chain Monte Carlo. K.O. Ekvall and [G.L. Jones](https://galinj.github.io)
 
 ### Applications
 
-Brief stimulus changes signaling extinction enhance resurgence.
-C.N. Martinez-Perez, J. Williams, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
-<small class="pub-meta">*Journal of the Experimental Analysis of Behavior*, in press</small>
-
 Evaluating multiple-context training to mitigate resurgence during context
 changes. K.L. Montague, C.N. Martinez-Perez, A. Edwards, C.M. Ritchey,
 M.S. Lamperski, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
 <small class="pub-meta">*Submitted*</small>
+
+Brief stimulus changes signaling extinction enhance resurgence.
+C.N. Martinez-Perez, J. Williams, C.M. Ritchey, T. Kuroda, K.O. Ekvall, and [C.A. Podlesnik](https://people.clas.ufl.edu/cpodlesnik/).\
+<small class="pub-meta">*[Journal of the Experimental Analysis of Behavior, 2026](https://doi.org/10.1002/jeab.70153)*</small>
 
 Validation and comparison of two prearrest prediction scores for in-hospital cardiac arrest survival.
 H. Karim, E. Piscator, G. Riva, K.O. Ekvall, K.G. Lauridsen, and T. Djärv.\
